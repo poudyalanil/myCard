@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -13,15 +14,19 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
 
               children: <Widget>[
                 CircleAvatar(
                   radius: 50.0,
                   backgroundImage: NetworkImage(
                       "https://pbs.twimg.com/profile_images/1264909133087567872/mn_icjzn_400x400.jpg"),
+                  // Get your image url here
                 ),
                 Text(
                   "Anil Poudyal",
+                  // name
                   style: TextStyle(
                     fontSize: 40,
                     color: Colors.white,
@@ -38,55 +43,62 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 10.0,
                   ),
                 ),
-                Card(
-
-                  margin: EdgeInsets.only(top: 20, bottom: 5,right: 25,left: 25),
-                  color: Colors.white,
-                  child: Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      children: <Widget>[
-
-                        Icon(Icons.phone,color: Colors.teal,size:20,),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(
-                          "+977-9840807492",
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.teal,
-                          ),
-
-
-                        ),
-                      ],
-
-                    ),
+                SizedBox(
+                  height:20,
+                  width: 100,
+                  child: Divider(
+                    color: Colors.teal[100],
                   ),
                 ),
                 Card(
-                  color: Colors.white,
+
+                  margin: EdgeInsets.only(top: 20, bottom: 5,right: 25,left: 25),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: ListTile(
+                      leading: Icon(Icons.email,color: Colors.teal),
+                      title: Text(
+                        "rameshowrgupta@gmail.com",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.teal,
+                        ),
+
+                      ),
+//                      subtitle: Text(
+//                          "This email is a dummy  email try mailing you might get new friend lol"
+//                              ,
+//                        style: TextStyle(
+//                          fontSize: 12,
+//                        ),
+//                      ),
+                    )
+
+                  ),
+                ),
+                Card(
                   margin: EdgeInsets.symmetric(vertical: 2.0, horizontal: 25.0),
 
                   child: Padding(
                     padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      children: <Widget>[
-                        Icon(Icons.email,color: Colors.teal,size: 20,),
-                        SizedBox(
-                          width: 20.0,
+                    child: ListTile(
+
+                      leading: Icon(Icons.phone,color: Colors.teal),
+                      title: Text(
+                        "+977-9645 608 453",
+                        style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 20,
                         ),
-                        Text(
-                          "anilrunjakote@gmail.com",
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.teal,
-                          ),
 
-                        )
+                      ),
+//                      subtitle: Text(
+//                        "This phone number is a dummy phone number try calling you might get new friend lol",
+//                        style: TextStyle(
+//                          fontSize: 12,
+//                        ),
+//                      ),
 
-                      ],
                     ),
                   ),
                 )
@@ -96,3 +108,26 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
